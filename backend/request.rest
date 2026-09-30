@@ -1,0 +1,28 @@
+### Register
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{
+  "nama": "Budi",
+  "email": "budi@gmail.com",
+  "password": "123456"
+}
+
+### LOGIN
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "johndoe@example.com",
+  "password": "rahasia123"
+}
+
+### GET PROFILE / TOKEN TEST
+# Catatan: Jalankan login terlebih dahulu untuk mendapatkan token.
+# Ganti string setelah 'Bearer ' dengan token yang didapatkan dari respons login.
+GET http://localhost:3000/api/auth/me
+Authorization: Bearer PASTE_TOKEN_DARI_RESPONSE_LOGIN
+
+###
+GET http://localhost:3000/api/auth/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzkwMzI4MDkxLCJleHAiOjE3OTAzMzE2OTF9.6uUokTKT3MPP-1zZPfx1UM0O75zLCHVid9hEDkgeU4Y
